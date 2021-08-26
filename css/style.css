@@ -1,0 +1,335 @@
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        button {
+            background-color: rgba(0, 0, 0, 0.38);
+            border-radius: 25px;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s ease all;
+        }
+        
+        nav {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            padding: 25px;
+            color: aliceblue;
+            flex-grow: 1;
+        }
+        
+        nav p {
+            font-weight: bold;
+            font-size: 20px;
+            height: 80px;
+            margin-left: 25px;
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-direction: row;
+        }
+        
+        .menu a {
+            text-decoration: none;
+            color: aliceblue;
+            margin-right: 50px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .menu a:hover {
+            color: rgb(103, 151, 163);
+        }
+        
+        .nav-scroll {
+            background-color: white;
+            box-shadow: 0px 0px 5px 0px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            height: 80px;
+        }
+        
+        .nav-scroll>p {
+            color: black;
+        }
+        
+        .menu-scroll>a {
+            color: black;
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-direction: row;
+        }
+        
+        header {
+            height: 700px;
+            background-size: cover;
+            background: linear-gradient(rgba(0, 0, 0, .50), rgba(41, 41, 41, 0.5)100%), url('../img/header-image.jpg');
+            background-position: center;
+            color: aliceblue;
+            background-repeat: no-repeat;
+        }
+        
+        .header-content {
+            max-width: 700px;
+            margin: 150px auto;
+            text-align: center;
+        }
+        
+        .header-content h1 {
+            font-size: 4rem;
+            text-shadow: #000 2px 3px 2px;
+            margin-bottom: 25px;
+        }
+        
+        .header-content p {
+            font-size: 32px;
+            text-shadow: #000 2px 3px 2px;
+        }
+        
+        .pacotes {
+            background: linear-gradient(rgb(252, 252, 252), rgb(205, 222, 233));
+            text-align: center;
+            padding: 15px;
+        }
+
+        ul{
+            list-style: none;
+        }
+        
+        .pacotes-title {
+            margin: 45px 0 25px 0;
+            font-size: 42px;
+            color: black;
+            text-shadow: white 2px 3px 2px;
+        }
+        
+        .pacotes-card {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .pacotes .card {
+            width: 400px;
+            height: 500px;
+            background: white;
+            border-radius: 24px 0px;
+            position: relative;
+            margin: 70px;
+        }
+        
+        .card-image {
+            width: 400px;
+            height: 320px;
+            border-radius: 24px 0px 0px 0px;
+        }
+        
+        .pacotes .card-content {
+            padding: 0 15px;
+        }
+        
+        .pacotes .card-content ul {
+            display: flex;
+            flex-direction: column;
+            color: grey;
+        }
+        
+        .pacotes .card-content h2 {
+            font-size: 20px;
+            margin: 8px 0 8px 0;
+        }
+        
+        .pacotes .card-content li {
+            font-size: 18px;
+            display: flex;
+            align-content: center;
+            margin: 4px 0px 5px 20px;
+        }
+        
+        .pacotes .card-content li svg {
+            width: 22px;
+            height: 22px;
+            margin-right: 10px;
+        }
+        
+        .pacotes .card .card-tag-top {
+            position: absolute;
+            right: 0;
+            top: 45px;
+            background: chocolate;
+            border-radius: 6px 0 0 6px;
+            font-size: 14px;
+            padding: 7px;
+            color: cornsilk;
+            font-weight: bold;
+        }
+        
+        .pacotes .card .card-tag-bottom {
+            position: absolute;
+            left: 0;
+            top: 250px;
+            background: darkblue;
+            border-radius: 0 6px 6px 0px;
+            font-size: 14px;
+            padding: 7px;
+            color: cornsilk;
+            font-weight: bold;
+        }
+        
+     .servicos {
+            padding: 15px;
+            height: 850px;
+        }
+        
+        .servicos .servicos-title {
+            text-align: center;
+            margin: 45px 0 80px 0;
+            font-size: 42px;
+            color: black;
+            text-shadow: white 2px 3px 2px;
+            padding: 35px;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        
+        .servicos .servicos-card {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            
+        }
+        
+        .servicos .card {
+            width: 330px;
+            max-width: 950px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            margin: 0 100px;
+        }
+        
+        .servicos .card svg {
+            width: 60px;
+            height: 60px;
+            margin: auto;
+        }
+
+        .servicos .card svg:hover {
+           stroke: rgb(235, 118, 23);
+           transition: all 1s;
+           transform: scale(1.3);
+        }
+        
+        .servicos .card h3 {
+            font-weight: bold;
+            font-size: 24px;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        
+        .servicos .card p {
+            color: grey;
+            font-size: 22px;
+            text-align: center;
+            padding: 25px;
+            line-height: 28px;
+            margin: auto;
+        }
+        
+        .servicos .card-content {
+            height: 180px;
+            text-align: center;
+        }
+
+        .servicos button{
+            background-color:rgb(14, 114, 180);
+            cursor: pointer;
+            transition: 1s ease all;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .servicos button:hover{
+            background-color: darkblue;
+            border-radius: 25px;
+        }
+
+        #map {
+            height: 400px;
+            /* The height is 400 pixels */
+            width: 100%;
+            /* The width is the width of the web page */
+          }
+        .contato{
+            padding: 60px 20%;
+            background:linear-gradient(rgb(252, 252, 252), rgb(205, 222, 233));
+            position: relative;
+        }
+        
+        .contato .contato-card{
+            width: 390px;
+            height: 300px;
+            background: white;
+            position: absolute;
+            z-index: 99;
+
+            border-radius:  8px;
+
+            top: calc(50% - 150px);
+            left:calc(20% - 195px);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+        .contato .contato-card h2{
+            font-size: 22px;
+            font-weight: bold;
+            margin: 10px;
+            
+
+        }
+
+        .contato .contato-card li{
+            font-size: 18px;
+            color:black;
+            font-weight: 500;
+            padding: 10px;
+            text-align: justify;
+            margin: 10px;
+
+        }
+
+        .contato .contato-card li svg{
+           width: 25px;
+          height: 25px;
+          margin: auto;
+
+
+        }
+        /*@media (max-width: 900px) {
+            nav {
+                display: none;
+            }
+        }
