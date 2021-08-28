@@ -16,14 +16,14 @@
         <nav>
             <p>Graziele Viagens</p>
             <ul class="menu">
-                <a href="#">Home</a>
-                <a href="#"> Pacotes</a>
-                <a href="#">Serviços</a>
-                <a href="#">Contato</a>
+                <a href="#home">Home</a>
+                <a href="#pacotes"> Pacotes</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#contato">Contato</a>
             </ul>
         </nav>
 
-        <div class="header-content">
+        <div id="home" class="header-content">
             <h1>Capadócia</h1>
             <p>Conheça a Capadócia, veja as belezas desse lugar! O embarque está próximo, junte-se a nós nessa experiência
             </p>
@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <section class="pacotes">
+    <section id="pacotes" class="pacotes">
         <h2 class="pacotes-title">
             Conheça nossos pacotes
         </h2>
@@ -122,7 +122,7 @@
 
     </section>
 
-    <section class="servicos">
+    <section id="servicos" class="servicos">
         <h1 class="servicos-title"> Serviços </h1>
         <div class="servicos-card">
             <div class="card">
@@ -154,36 +154,85 @@
         </div>
     </section>
 
-    <section class="contato">
+    <section id="contato" class="contato">
         <div class="contato-card">
         <h2>Entre em contato</h2>
-   
         <ul>
-             <li><i data-feather="map-pin"></i> Rua Porto, 100</li>
-             <li><i data-feather="at-sign"></i> contato@grazieleviagens.com.br</li>
-             <li><i data-feather="phone"></i> (73) XXXX-XXXX</li>
+            <li><i data-feather="map-pin"></i> Rua Porto, 100</li>
+            <li><i data-feather="at-sign"></i> contato@grazieleviagens.com.br</li>
+            <li><i data-feather="phone"></i> (73) XXXX-XXXX</li>
 
         
         </ul>
     </div>
         <div id="map"></div>
     </section>
+    <footer>
+        <div class="rodape">
+        <div class="social-media">
+        <h4>Siga ofertas nas redes</h4>
+            <ul>
+                <li><i data-feather="facebook"></i></li>
+                <li><i data-feather="instagram"></i></li>
+                <li><i data-feather="twitter"></i></li>
+                <li><i data-feather="youtube"></i></li>
+            </ul>
+        </div>
+        <div class="payment">
+        <h4>Formas de pagamento</h4>
+            <ul>
+                <li class="card-type">
+                <img src="img/visa.svg" alt="visa">
+                </li>
+                <li class="card-type">
+                    <img src="img/mastercard.svg" alt="mastercard">
+                </li>
+                <li class="card-type">
+                    <img src="img/elo.svg" alt="elo">
+                </li>
+                <li class="card-type">
+                    <img src="img/hipercard.svg" alt="hipercard">
+                </li>
+                <li class="card-type">
+                    <img src="img/american-express.svg" alt="american-express">
+                </li>
+                <li class="pix">
+                    <img src="img/pix.png" alt="pix">
+                </li>
+            </ul>
+        </div>
+    </div>
+            <div class="text">
+                <p>Copyright © 2021 Graziele Viagens | Todos os direitos reservados.</p>
+            </div>
+    </footer>
     <script>
         feather.replace();
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
         function initMap() {
         // The location of Uluru
         const uluru = { lat: -25.344, lng: 131.036 };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
+        zoom: 4,
+        center: uluru,
         });
         // The marker, positioned at Uluru
         const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
+        position: uluru,
+        map: map,
         });
-      }
+    }
     </script>
 
 <script async
